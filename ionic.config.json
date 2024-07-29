@@ -1,0 +1,7 @@
+{
+  "name": "panorama-biblico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
