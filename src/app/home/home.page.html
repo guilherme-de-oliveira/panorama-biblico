@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Inbox
+      Panorama Bíblico
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,12 +14,12 @@
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">
-        Inbox
+        Panorama Bíblico
       </ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
+    <app-message *ngFor="let slide of getSlides()" [slide]="slide"></app-message>
   </ion-list>
 </ion-content>

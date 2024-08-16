@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" routerLink="/">
+        <ion-icon name="chevron-back"></ion-icon>
+        &nbsp; Menu
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img [src]="'../../assets/image/'+ slide.id +'.png'" alt="">
+  <ion-button *ngIf="slide.id > 1" [routerLink]="'/slide/' + (slide.id - 1)" fill="outline" id="chevron-back" slot="fixed" shape="round">
+    <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+  </ion-button>
+  <ion-button [routerLink]="'/slide/' + (slide.id + 1)" fill="outline" id="chevron-forward" slot="fixed" shape="round">
+    <ion-icon slot="icon-only" name="chevron-forward"></ion-icon>
+  </ion-button>
+</ion-content>
