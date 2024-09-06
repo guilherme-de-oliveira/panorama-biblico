@@ -69,14 +69,14 @@ export class DataService {
       id: 8,
       title: 'Aliança',
       icon: 'Alianca',
-      img: '2 - Aliança',
+      img: '2 - Alianca',
       next: 9,
       prev: 7
     },
     {
+      id: 9,
       title: 'Provisão',
-      id: 1,
-      icon: '',
+      icon: 'Provisao no Egito',
       img: '3 - Provisão no Egito'
     },
   ];

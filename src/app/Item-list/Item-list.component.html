@@ -1,13 +1,13 @@
 <ion-item
-  *ngIf="slide"
-  [routerLink]="'/slide/' + slide.id"
+  *ngIf="slide?.icon"
+  [routerLink]="'/slide/' + slide?.id"
   [detail]="false"
 >
   <div slot="start"></div>
-  <img [src]="'../../assets/icon/'+slide.icon+'.png'" style="width: 2em;"> &nbsp;&nbsp;&nbsp;
+  <img [src]="'../../assets/icon/'+slide?.icon+'.png'" style="width: 2em;"> &nbsp;&nbsp;&nbsp;
   <ion-label class="ion-text-wrap">
     <h2>
-      {{ slide.title }}
+      {{ slide?.title }}
       <span class="date">
         <ion-icon
           aria-hidden="true"
@@ -16,7 +16,6 @@
         ></ion-icon>
       </span>
     </h2>
-    <!-- <h3>{{ slide.subject }}</h3> -->
-    <p>{{ slide.subject }}</p>
+    <!-- <p>{{ slide?.subject }}</p> -->
   </ion-label>
 </ion-item>

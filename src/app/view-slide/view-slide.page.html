@@ -10,11 +10,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <img [src]="'../../assets/image/'+ slide.id +'.png'" alt="">
-  <ion-button *ngIf="slide.id > 1" [routerLink]="'/slide/' + (slide.id - 1)" fill="outline" id="chevron-back" slot="fixed" shape="round">
+  <img [src]="'../../assets/image/'+ slide.img +'.JPG'" alt="">
+  <ion-button *ngIf="slide.id > 1" [routerLink]="'/slide/' + (slide.prev)" fill="outline" id="chevron-back" slot="fixed" shape="round">
     <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
   </ion-button>
-  <ion-button [routerLink]="'/slide/' + (slide.id + 1)" fill="outline" id="chevron-forward" slot="fixed" shape="round">
+  <ion-button [routerLink]="'/slide/' + (slide.next)" fill="outline" id="chevron-forward" slot="fixed" shape="round">
     <ion-icon slot="icon-only" name="chevron-forward"></ion-icon>
   </ion-button>
 </ion-content>
