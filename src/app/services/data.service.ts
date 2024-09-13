@@ -77,7 +77,8 @@ export class DataService {
       id: 9,
       title: 'Provisão',
       icon: 'Provisao no Egito',
-      img: '3 - Provisão no Egito'
+      img: '3 - Provisão no Egito',
+      prev: 9
     },
   ];
 

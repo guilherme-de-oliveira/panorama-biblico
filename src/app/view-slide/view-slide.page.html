@@ -9,18 +9,26 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content [fullscreen]="true">
-  <ion-button fill="clear" id="menu" slot="fixed" routerLink="/">
-    <ion-icon name="chevron-back"></ion-icon>
-    &nbsp; Menu
-  </ion-button>
+<ion-content class="container" [fullscreen]="true">
+  <img 
+    (touchend)="showButtons = !showButtons"
+    [ngClass]="{'container-back': showButtons}" 
+    [src]="'../../assets/image/'+ slide.img +'.JPG'" >
 
-  <img [src]="'../../assets/image/'+ slide.img +'.JPG'" alt="">
-  
-  <ion-button *ngIf="slide.id > 1" [routerLink]="'/slide/' + (slide.prev)" fill="outline" id="chevron-back" slot="fixed" shape="round">
-    <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
-  </ion-button>
-  <ion-button [routerLink]="'/slide/' + (slide.next)" fill="outline" id="chevron-forward" slot="fixed" shape="round">
-    <ion-icon slot="icon-only" name="chevron-forward"></ion-icon>
-  </ion-button>
+  @if (showButtons){
+    <div class="controls">
+      <ion-button fill="clear" id="menu" slot="fixed" routerLink="/">
+        <ion-icon name="chevron-back"></ion-icon>
+        &nbsp; Menu
+      </ion-button>
+    </div>
+
+    <ion-button class="controls" *ngIf="slide.id > 1" [routerLink]="'/slide/' + (slide.prev)" fill="outline" id="chevron-back" slot="fixed" shape="round">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
+    <ion-button class="controls" [routerLink]="'/slide/' + (slide.next)" fill="outline" id="chevron-forward" slot="fixed" shape="round">
+      <ion-icon slot="icon-only" name="chevron-forward"></ion-icon>
+    </ion-button>
+  }
+
 </ion-content>

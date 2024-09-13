@@ -9,6 +9,24 @@ h1 {
   font-size: 1.4rem;
 }
 
+.container-back {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+  fill-opacity: black;
+  position: absolute;
+  top: 3px;
+  width: 100%;
+}
+
+.controls {
+  animation: fadeIn 0.6s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 p {
   line-height: 1.4;
 }

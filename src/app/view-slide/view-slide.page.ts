@@ -20,6 +20,7 @@ export class ViewSlidePage implements OnInit {
   private data = inject(DataService);
   private activatedRoute = inject(ActivatedRoute);
   private platform = inject(Platform);
+  showButtons: boolean = true;
 
   constructor() {
     addIcons({ personCircle, chevronBack, chevronForward });
